@@ -84,14 +84,41 @@ header {
 
 /* ----- Phase 1 - Moderate Screen ----- */
 
-/* Your code here */
+@media screen and (min-width: 821px) {
+  .content {
+    flex-direction: row;
+  }
+}
 
 /* ----- Phase 1 - Wide Screen ----- */
 
-/* Your code here */
+@media screen and (min-width: 1220px) {
+  .page {
+    flex-direction: row;
+  }
+}
 
-/* ===== PRINTING ===== */
+/* ===== Phase 2 - Printing ===== */
 
-/* Phase 2 */
+@media print {
 
-/* Your code here */
+  header {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .story-box {
+    background-color: white;
+    filter: none;
+  }
+
+  .image-box img {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    width: 10%;
+  }
+}
